@@ -1,154 +1,183 @@
-JSUtils
-A comprehensive, open-source JavaScript library providing essential utility functions for daily web development projects. This repository includes a collection of robust, reusable utilities for string manipulation, date/time operations (powered by Moment.js), and general-purpose tasks like deep copying, debouncing, and data validation. Designed for both Node.js and browser environments, JSUtils is perfect for building reliable applications, from web UIs to backend services.
-About the Repository
-JSUtils is a versatile utility library aimed at simplifying common JavaScript tasks in projects like form validation, data processing, scheduling, and performance optimization. The library is organized into modular files, each focusing on a specific category of utilities, with robust error handling and clear documentation. Whether you're working on a hotel management system, e-commerce platform, or any JavaScript project, these utilities streamline development and enhance code reliability.
-Key Features
+# JSUtils
 
-Comprehensive Utilities: Covers string manipulation, date/time operations, and general-purpose functions like deep copying and throttling.
-Modular Structure: Organized into separate files (stringUtils.js, momentUtils.js, advancedMomentUtils.js, projectUtils.js) for easy integration.
-Robust Error Handling: Functions validate inputs and return safe defaults (e.g., empty strings, null) for invalid cases.
-Cross-Environment Support: Compatible with Node.js and browsers (with minor adjustments for global scope).
-Well-Documented: JSDoc comments provide clear usage instructions for each function.
-Dependency Management: Minimal dependencies (Moment.js and Moment TimeZone for date utilities; none for others).
+A comprehensive, open-source JavaScript library providing essential utility functions for daily web development projects. `JSUtils` includes robust, reusable utilities for string manipulation, date/time operations (powered by Moment.js), and general-purpose tasks like deep copying, debouncing, and data validation. Designed for both Node.js and browser environments, it simplifies development for applications like hotel management systems, e-commerce platforms, or any JavaScript project.
 
-Included Utilities
-The repository contains the following utility categories:
-String Utilities (stringUtils.js)
+## About the Repository
 
-capitalizeString: Capitalizes the first letter of a string.
-truncateString: Truncates a string with an ellipsis.
-normalizeString: Removes extra spaces and optionally lowercases.
-slugifyString: Generates URL-friendly slugs.
-isValidEmail: Validates email addresses.
-extractRegexMatches: Extracts regex matches from a string.
-dynamicReplace: Replaces substrings dynamically.
-toCamelCase: Converts strings to camelCase.
-formatString: Formats strings with placeholders.
-containsSubstrings: Checks for substrings.
-chunkString: Splits strings into fixed-length chunks.
-stripHtmlTags: Removes HTML tags.
-encodeToBase64 / decodeFromBase64: Handles Base64 encoding/decoding.
-generateRandomString: Creates random alphanumeric strings.
-countOccurrences: Counts substring or regex occurrences.
+`JSUtils` streamlines common JavaScript tasks, such as form validation, data processing, scheduling, and performance optimization. Organized into modular files, each utility category is well-documented with JSDoc comments and includes robust error handling. This library is ideal for developers seeking reliable, dependency-light solutions.
 
-Date/Time Utilities (momentUtils.js)
+### Key Features
 
-getCurrentDateTime: Gets the current date/time.
-parseDateString: Parses date strings.
-formatDate: Formats dates with custom patterns.
-addTime / subtractTime: Modifies dates by time units.
-isBeforeDate / isAfterDate: Compares dates.
-setTimezone: Converts dates to specific timezones (requires Moment TimeZone).
-And more for parsing, formatting, and querying dates.
+- **Comprehensive Utilities**: Covers strings, dates, and general-purpose functions.
+- **Modular Structure**: Includes `stringUtils.js`, `momentUtils.js`, `advancedMomentUtils.js`, and `projectUtils.js`.
+- **Robust Error Handling**: Validates inputs with safe defaults (e.g., empty strings, null).
+- **Cross-Environment Support**: Works in Node.js and browsers (with minor adjustments).
+- **Minimal Dependencies**: Only Moment.js and Moment TimeZone for date utilities; others are dependency-free.
+- **Well-Documented**: Clear JSDoc comments for each function.
 
-Advanced Date/Time Utilities (advancedMomentUtils.js)
+### Included Utilities
 
-generateRecurringEvents: Creates recurring event dates.
-batchConvertTimezone: Converts multiple dates to a timezone.
-getDateRangeIntersection: Finds overlapping date ranges.
-splitDateRange: Splits ranges into chunks.
-aggregateDateRanges: Calculates total duration of ranges.
-getNextBusinessDay: Finds the next business day, skipping holidays.
-generateTimeSlots: Generates available time slots with constraints.
+#### String Utilities (`stringUtils.js`)
 
-General Utilities (projectUtils.js)
+- `capitalizeString`: Capitalizes the first letter of a string.
+- `truncateString`: Truncates strings with an ellipsis.
+- `normalizeString`: Removes extra spaces, optionally lowercases.
+- `slugifyString`: Generates URL-friendly slugs.
+- `isValidEmail`: Validates email addresses.
+- `extractRegexMatches`: Extracts regex matches.
+- `dynamicReplace`: Replaces substrings dynamically.
+- `toCamelCase`: Converts to camelCase.
+- `formatString`: Formats with placeholders.
+- `containsSubstrings`: Checks for substrings.
+- `chunkString`: Splits into fixed-length chunks.
+- `stripHtmlTags`: Removes HTML tags.
+- `encodeToBase64` / `decodeFromBase64`: Handles Base64 encoding/decoding.
+- `generateRandomString`: Creates random alphanumeric strings.
+- `countOccurrences`: Counts substring/regex occurrences.
 
-deepCopy: Deeply copies objects/arrays, handling circular references.
-debounce / throttle: Limits function execution rates.
-validateObject: Validates objects against a schema.
-groupBy: Groups arrays by a key or function.
-flattenArray: Flattens nested arrays.
-retryWithBackoff: Retries async functions with exponential backoff.
-parseQueryString / toQueryString: Handles query string parsing/generation.
-deepMerge: Merges objects deeply.
-generateUniqueId: Creates unique IDs.
-sanitizeHtmlString: Escapes HTML characters.
-chunkArray: Splits arrays into chunks.
-memoize: Caches function results.
-deepEqual: Compares values deeply.
+#### Date/Time Utilities (`momentUtils.js`)
 
-Usage
-Node.js
+- `getCurrentDateTime`: Gets current date/time.
+- `parseDateString`: Parses date strings.
+- `formatDate`: Formats dates with custom patterns.
+- `addTime` / `subtractTime`: Modifies dates by time units.
+- `isBeforeDate` / `isAfterDate`: Compares dates.
+- `setTimezone`: Converts to specific timezones (requires Moment TimeZone).
+- And more for parsing, formatting, and querying.
 
-Clone the repository or install via npm (once published):git clone https://github.com/your-username/js-utils.git
+#### Advanced Date/Time Utilities (`advancedMomentUtils.js`)
 
-ornpm install js-utils
+- `generateRecurringEvents`: Creates recurring event dates.
+- `batchConvertTimezone`: Converts multiple dates to a timezone.
+- `getDateRangeIntersection`: Finds overlapping date ranges.
+- `splitDateRange`: Splits ranges into chunks.
+- `aggregateDateRanges`: Calculates total duration of ranges.
+- `getNextBusinessDay`: Finds next business day, skipping holidays.
+- `generateTimeSlots`: Generates time slots with constraints.
 
+#### General Utilities (`projectUtils.js`)
 
-Import specific utilities:const { capitalizeString, deepCopy, generateRecurringEvents } = require('js-utils');
+- `deepCopy`: Deeply copies objects/arrays, handling circular references.
+- `debounce` / `throttle`: Limits function execution rates.
+- `validateObject`: Validates objects against schemas.
+- `groupBy`: Groups arrays by key/function.
+- `flattenArray`: Flattens nested arrays.
+- `retryWithBackoff`: Retries async functions with backoff.
+- `parseQueryString` / `toQueryString`: Handles query strings.
+- `deepMerge`: Merges objects deeply.
+- `generateUniqueId`: Creates unique IDs.
+- `sanitizeHtmlString`: Escapes HTML characters.
+- `chunkArray`: Splits arrays into chunks.
+- `memoize`: Caches function results.
+- `deepEqual`: Compares values deeply.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/js-utils.git
+```
+
+For Node.js, copy the desired `.js` files to your project. For browsers, include via `<script>` tags or use a bundler. For date/time utilities, install dependencies:
+
+```bash
+npm install moment moment-timezone
+```
+
+## Usage
+
+### Node.js
+
+Import specific utilities:
+
+```javascript
+const { capitalizeString, deepCopy, generateRecurringEvents } = require('./stringUtils');
+// or, once published: require('js-utils');
 console.log(capitalizeString('hello world')); // 'Hello world'
 console.log(deepCopy({ a: 1, b: { c: 2 } })); // Deep copied object
 console.log(generateRecurringEvents('2025-06-10', '2025-06-20', 'days', 2));
+```
 
+### Browser
 
+Include files and Moment.js dependencies:
 
-Browser
-
-Include the desired utility file(s) in your HTML:<script src="stringUtils.js"></script>
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data.min.js"></script>
+<script src="stringUtils.js"></script>
 <script src="momentUtils.js"></script>
 <script src="advancedMomentUtils.js"></script>
 <script src="projectUtils.js"></script>
+<script>
+  console.log(capitalizeString('hello world')); // 'Hello world'
+  console.log(formatDate(getCurrentDateTime(), 'YYYY-MM-DD')); // '2025-06-10'
+  console.log(deepCopy({ a: [1, 2] })); // Deep copied object
+</script>
+```
 
-Note: For date/time utilities, include Moment.js and Moment TimeZone:<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data.min.js"></script>
+### Example
 
-
-Use functions globally:console.log(capitalizeString('hello world')); // 'Hello world'
-console.log(formatDate(getCurrentDateTime(), 'YYYY-MM-DD')); // '2025-06-10'
-console.log(deepCopy({ a: [1, 2] })); // Deep copied object
-
-
-
-Example
+```javascript
 // Node.js example
-const utils = require('js-utils');
+const utils = require('./stringUtils');
+// or, once published: require('js-utils');
 console.log(utils.truncateString('This is a long string', 10)); // 'This is a...'
 console.log(utils.generateUniqueId()); // e.g., '1j4k5l2m-randomstring'
 console.log(utils.generateTimeSlots('2025-06-10', '2025-06-12', 30, { days: [0, 6], hours: { start: '09:00', end: '17:00' } }, 'America/New_York'));
+```
 
-Installation
-Clone the repository:
-git clone https://github.com/your-username/js-utils.git
+## Contributing
 
-For Node.js, copy the desired .js files to your project and import them. For browsers, include via <script> tags or use a bundler like Webpack. For date/time utilities, install Moment.js and Moment TimeZone:
-npm install moment moment-timezone
+Contributions are welcome to enhance `JSUtils`! Add new utilities, optimize code, write tests, or improve documentation.
 
-Contributing
-We welcome contributions to make JSUtils even better! Add new utilities, optimize existing ones, write tests, or improve documentation.
-How to Contribute
+### How to Contribute
 
-Fork the Repository: Click the "Fork" button on GitHub.
-Clone Your Fork:git clone https://github.com/your-username/js-utils.git
+1. **Fork the Repository**: Click "Fork" on GitHub.
+2. **Clone Your Fork**:
 
+   ```bash
+   git clone https://github.com/your-username/js-utils.git
+   ```
 
-Create a Branch:git checkout -b feature/your-feature-name
+3. **Create a Branch**:
 
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-Make Changes: Add or improve functions, ensuring:
-CamelCase naming for functions.
-JSDoc comments for documentation.
-Robust error handling for edge cases.
-Minimal dependencies (only Moment.js for date utilities).
+4. **Make Changes**: Ensure:
+   - CamelCase function names.
+   - JSDoc comments for documentation.
+   - Robust error handling.
+   - Minimal dependencies (Moment.js for date utilities only).
+5. **Test Changes**: Verify in Node.js and browsers.
+6. **Commit and Push**:
 
+   ```bash
+   git commit -m "Add your descriptive commit message"
+   git push origin feature/your-feature-name
+   ```
 
-Test Your Changes: Verify in Node.js and browser environments.
-Commit and Push:git commit -m "Add your descriptive commit message"
-git push origin feature/your-feature-name
+7. **Open a Pull Request**: Submit a PR with a clear description.
 
+### Contribution Ideas
 
-Open a Pull Request: Submit a PR with a clear description of your changes.
+- New utility functions (e.g., math, file handling).
+- Unit tests with Jest or Mocha.
+- Performance optimizations.
+- TypeScript definitions.
+- Real-world use case examples.
 
-Contribution Ideas
+## License
 
-Add new utility functions (e.g., math utilities, file handling).
-Write unit tests using Jest or Mocha.
-Optimize performance of existing functions.
-Add TypeScript definitions.
-Create examples or demos for real-world use cases (e.g., form validation, API integration).
+MIT License. See [LICENSE](LICENSE) for details.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-For questions, suggestions, or issues, open a GitHub issue or contact the maintainer at your-email@example.com.
+## Contact
 
-Thank you for using and contributing to JSUtils! Let's build a robust utility library together.
+Open a GitHub issue or contact [meenavishal@gmail.com](meenavishal@gmail.com) for questions or suggestions.
+
+---
+
+Thank you for using and contributing to `JSUtils`!
