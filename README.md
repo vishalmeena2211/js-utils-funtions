@@ -138,7 +138,7 @@ Contributions are welcome to enhance `JSUtils`! Add new utilities, optimize code
 2. **Clone Your Fork**:
 
    ```bash
-   git clone https://github.com/your-username/js-utils.git
+   git clone https://github.com/vishalmeena2211/js-utils.git
    ```
 
 3. **Create a Branch**:
